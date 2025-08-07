@@ -1,0 +1,23 @@
+name: CI/CD Workflow for test branch
+
+on:
+  push:
+    branches: [ "test" ]
+  workflow_dispatch:
+
+jobs:
+  checkout_and_push:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository  
+      uses: actions/checkout@v4
+
+    - name: Push to main branch
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: main
+        folder: .
+        commit_message: "Deploy changes to main branch from test branch"
+        token: ${{ secrets.GITHUB_TOKEN }}  
