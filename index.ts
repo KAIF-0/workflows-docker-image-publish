@@ -1,1 +1,1 @@
-console.log("This is a wrokflow testing server.");
+console.log("This is a github actions wrokflow testing server.");
