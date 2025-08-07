@@ -18,7 +18,7 @@ jobs:
     - name: Build and push docker image
       uses: docker/build-push-action@v4
       with:
-        context: ./DockerFile
+        context: .
         push: true
         tags: ghcr.io/neyo386/workflows:latest
         username: ${{ secrets.DOCKER_USERNAME }}
