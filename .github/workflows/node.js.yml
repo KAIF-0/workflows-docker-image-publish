@@ -18,7 +18,7 @@ jobs:
     - name: Build and push docker image
       uses: mr-smithers-excellent/docker-build-push@v6
       with:
-        image: neyo386/workflows:latest
+        image: neyo386/workflows
         tags: latest
         registry: docker.io
         dockerfile: Dockerfile
